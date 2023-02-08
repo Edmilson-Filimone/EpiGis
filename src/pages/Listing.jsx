@@ -45,7 +45,7 @@ function Listing() {
         </div>
         <div className='flex items-center space-x-1'>
           <GoCalendar className='text-slate-500' />
-          <span className='font-light'>{data.date}</span>
+          <span className='font-light shrink-0'>{data.date}</span>
         </div>
         <div className='flex items-center space-x-1'>
           <BsPersonCircle className='text-slate-500' />
@@ -58,9 +58,9 @@ function Listing() {
             <img className='max-w-full' src={data.profileUrl} alt={data.name} title={data.name} />
           </div>
           <h4 className='text-xl font-semibold py-4'>Descrition</h4>
-          <div>{data.description}</div>
+          <div className='md:mb-10'>{data.description}</div>
         </article>
-        <article className='flex flex-col gap-20 px-4 pt-10'>
+        <article className='flex flex-col md:gap-20 px-4 pt-10'>
           {data.country.startsWith('Mo' || 'mo')? 
           (<ul className='flex flex-col gap-4'>
             <li className='flex flex-col'>
@@ -88,10 +88,10 @@ function Listing() {
             </li>
           </ul>
           )}
-          <ul className='flex space-x-2 lg:justify-between lg:text-2xl'>
-            <li className='w-[48px] p-3 rounded-full bg-blue-500 hover:brightness-110 text-white'><a href="#" target="_blank" title='Go to our twitter'><BsTwitter/></a></li>
-            <li className='w-[48px] p-3 rounded-full bg-blue-500 hover:brightness-110 text-white'><a href="#" target="_blank" title='Go to our linkedin'><BsLinkedin/></a></li>
-            <li className='w-[48px] p-3 rounded-full bg-blue-500 hover:brightness-110 text-white'><a href="#" target="_blank" title='Go to our github'><BsGithub/></a></li>
+          <ul className='flex space-x-2 my-8 md:my-0 lg:justify-between lg:text-2xl'>
+            <li className='w-fit p-3 rounded-full bg-blue-500 hover:brightness-110 text-white'><a href="#" target="_blank" title='Go to our twitter'><BsTwitter/></a></li>
+            <li className='w-fit p-3 rounded-full bg-blue-500 hover:brightness-110 text-white'><a href="#" target="_blank" title='Go to our linkedin'><BsLinkedin/></a></li>
+            <li className='w-fit p-3 rounded-full bg-blue-500 hover:brightness-110 text-white'><a href="#" target="_blank" title='Go to our github'><BsGithub/></a></li>
           </ul>
         </article>
       </section>
