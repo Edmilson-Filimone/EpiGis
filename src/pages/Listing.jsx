@@ -10,6 +10,9 @@ import DOMPurify from 'dompurify'
 
 
 function Listing() {
+  //adjustment to force the page start in the top position
+  window.scrollTo(0,0)
+  
   const param = useParams()
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState({})
